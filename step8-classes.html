@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classes</title>
+    <script>
+        //Class
+        var Hero = function(fn,ln){
+            //Public variables
+            this.firstname = fn;
+            this.lastname = ln;
+            this.fullname = function(){
+                return this.firstname + " " + this.lastname;    
+            }
+            
+            //private
+            var secret = "My secret";
+
+        }
+        var hero  = new Hero("Bruce","Wayne");
+        console.log(hero.firstname,hero.lastname);
+        console.log(hero.fullname())
+
+        //Now we are using class keyword
+
+        class Heroine {
+            static secret(){
+                return "My secret";
+            }
+            constructor(fn,ln){
+                //public
+                this.firstname = fn;
+                this.lastname = ln;
+
+                //private
+                this._city = "Gonatham";
+            }
+            //Public method
+            fullname()
+            {
+                return this.firstname + this.lastname;
+            }
+
+            //private method create getters and setters
+            get city(){
+                return this._city;
+            }
+            set city(newcity){
+                this._city = newcity
+            }
+
+        }
+
+        var heroine = new Heroine("Prachi","Waghmare");
+        var heroine2 = new Heroine("Pratiksha","Karode");
+
+        console.log(heroine.firstname + heroine.lastname);
+        console.log(heroine2.firstname + heroine2.lastname);
+        console.log(heroine.fullname === heroine2.fullname);
+
+
+        //make subclasses.
+        class ComicHero extends Hero{
+            constructor(fn,ln,power){
+                super(fn,ln);
+                this.power = power;
+            }
+        }
+
+        var hero3 = new ComicHero("Bruce","Wayne",8);
+        console.log(hero3.firstname + hero3.lastname);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

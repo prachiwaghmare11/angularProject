@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functions</title>
+    <script>/*
+        console.log(user) // undefined
+        function myfun1(){
+            
+        }
+        var myfun2  = function(){
+
+        }
+        myfun1();
+        myfun2();
+
+        var user = "batman";
+        console.log(user)
+        */
+
+        function addme(){
+            
+            var tempvar1 = 0;
+            for(var i=0;i<arguments.length;i++){
+                tempvar1 += arguments[i];
+            }
+            return tempvar1;
+        }
+
+        //In ES6 by adding ... variable is converted into array
+        function addme(...ibm){
+            var tempvar1 = 0;
+            for(var i=0;i<ibm.length;i++){
+                tempvar1 += ibm[i];
+            }
+            return tempvar1;
+        }
+
+        function sayname(msg, fname, lname){
+            var msg = msg || "hello";
+            var fname = fname || 'guest';
+            var lname = lname || "";
+            return msg+" "+fname+" "+lname;
+        }
+
+        function sayname(fname = "guest", lname = "",msg = "hello" ){
+            return msg+" "+fname+" "+lname;
+        }
+        console.log(sayname("Bruce","Wayne"));
+
+        var sayname = msg => msg;
+        console.log(sayname("My name is Prachi"));
+
+        addme(5,6,7,8);
+        addme(5,6);
+        addme(5);
+
+        console.log(addme(5,6,7,8),
+        addme(5,6),
+        addme(5));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>   

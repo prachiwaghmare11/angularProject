@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    
+        window.onload = windowOnLoad;
+        
+        window.addEventListener("load",windowAddEventListener)
+        function windowAddEventListener(){
+            document.getElementsByTagName("h1")[0].innerHTML += "windowAddEventListener() <br/>";
+        }
+        function windowOnLoad(){
+            document.getElementsByTagName("h1")[0].innerHTML += "windowOnLoad() <br/>";
+        }
+        function bodyOnLoad(){
+            document.getElementsByTagName("h1")[0].innerHTML += "bodyOnLoad() <br/>";
+        }
+    </script>
+</head>
+<body onload="bodyOnLoad()">
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 1</li>
+        <li>List Item 1</li>
+        <li>List Item 1</li>
+        <li>List Item 1</li>
+    </ul>
+   <h1></h1>
+    
+</body>
+</html>

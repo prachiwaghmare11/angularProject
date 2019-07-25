@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destructuring</title>
+    <script>
+        var hero = {
+            fname : "Clark",
+            lname : "Kent",
+            title : "Superman"
+        };
+        
+        /*
+        var temphero = hero;
+        console.log(temphero.title); //Superman
+        console.log(hero.title); //Superman
+        temphero.title = "Joker";
+        //Passed by Reference
+        console.log(temphero.title); //Joker
+        console.log(hero.title); //Joker
+
+        */
+
+        let {fname: hfname,lname: hlname, title: htitle } = hero
+        console.log(hfname)
+        hfname = "Prachi"
+        console.log(hfname)
+        console.log(hero.fname)
+
+        //Created new vriables who have values as hero
+        let {fname,lname, title} = hero
+        console.log(fname)
+
+        //Arrays
+        const heros = ["Batman","Superman","Spiderman"];
+        const [firsthero,secondhero,thirdhero] = heros;
+        console.log(firsthero, secondhero, thirdhero);
+
+        const hero1 = "Batman";
+        const hero2 = "Superman";
+        const hero3 = "Spiderman";
+        const[h1,h2,h3] = [hero1,hero2,hero3]
+        console.log(h1,h2,h3)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

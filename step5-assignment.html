@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignemnt</title>
+    <script>
+        
+        var shop={
+            purchaseValue : function(){
+                return 100;
+            },
+            salesValue : function(){
+               // var self = this;
+                getprofit = function(){
+                    return this.purchaseValue()*0.20
+                }
+                return this.purchaseValue()+getprofit.call(this);
+            }
+        };
+        console.log(shop.salesValue());
+
+        var hero1 = {
+            fname:"prachi",
+            lname:"waghmare",
+            title:"madam",
+            fullname: function(){
+                return "mah name is"+fname+lname;
+            }
+        };
+        var hero2 = {
+            fname:"prachi1",
+            lname:"waghmare1",
+            title:"madam1"
+        };
+        var hero3 = {
+            fname:"prachi2",
+            lname:"waghmare2",
+            title:"madam2"
+        };
+        var hero4 = {
+            fname:"prachi3",
+            lname:"waghmare3",
+            title:"madam3"
+        };
+
+
+        console.log(hero1.fullname());
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
